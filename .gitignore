@@ -16,3 +16,5 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+keys/ec2
+keys/ec2.pub

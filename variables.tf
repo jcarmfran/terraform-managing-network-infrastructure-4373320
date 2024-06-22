@@ -23,12 +23,28 @@ variable "vpc_cidr" {
   type         = string
 }
 
-variable "subnet_name" {
+variable "subnets" {
   description  = "Name of AWS subnet"
-  type         = string
+  type         = list(string)
 }
 
-variable "subnet_cidr" {
-  description  = "CIDR of AWS subnet"
-  type         = string
+variable "instances" {
+  description = "List of AWS instances"
+  type = list(string)
+}
+
+variable "instance_type" {
+  description = "Type of AWS instance to deploy"
+  type = string
+}
+
+variable "ami_id" {
+  description = "ID of AWS machine image"
+  type = string
+}
+
+variable "public_key" {
+  description = "Path to public key"
+  type = string
+  sensitive = true
 }

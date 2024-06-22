@@ -1,4 +1,9 @@
 vpc_name    = "vpc-dev"
 vpc_cidr    = "10.5.0.0/20"
-subnet_name = "app-subnet"
-subnet_cidr = "10.5.1.0/24"
+subnets = ["sub-public", "sub-private"]
+
+# instance values
+instance_type  = "t3.nano"
+ami_id         = "ami-0f0ba639982a32edb"
+instances      = ["ec2-public", "ec2-private"]
+public_key     = "keys/ec2.pub"
